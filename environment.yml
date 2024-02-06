@@ -1,0 +1,16 @@
+name: fake_hisepy
+channels:
+  - conda-forge
+  - defaults
+  - ejohnsms
+dependencies:
+  - python=3.11
+  - conda-build
+  - grayskull
+  - numpy
+  - pandas
+  - pip
+  - pip:
+    - build
+    - twine
+    - setuptools

@@ -1,1 +1,1 @@
-conda build conda/meta.yaml
+conda build --output fake_hisepy

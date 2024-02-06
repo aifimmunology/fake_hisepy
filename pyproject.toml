@@ -12,20 +12,19 @@ classifiers = [
   "Development Status :: 5 - Production/Stable",
 
   # Indicate who your project is intended for
-  "Intended Audience :: Developers, Scientists",
-  "Topic :: Immunology :: Statistical Regression",
+  "Intended Audience :: Developers",
+  "Topic :: Scientific/Engineering",
 
   # Pick your license as you wish (see also "license" above)
   "License :: OSI Approved :: MIT License",
 
+  "Natural Language :: English",
+
   # Specify the Python versions you support here.
-  "Programming Language :: Python :: 3",
-  "Programming Language :: Python :: 3.7",
-  "Programming Language :: Python :: 3.8",
-  "Programming Language :: Python :: 3.9",
-  "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
-  "Programming Language :: Python :: 3 :: Only",
+  # "Programming Language :: Python :: 3.10",
+  # "Programming Language :: Python :: 3.11",
+  # "Programming Language :: Python :: 3 :: Only",
 ]
 authors = [
   {name = "Paul Mariz", email = "paul.mariz@alleninstitute.org"},
@@ -36,18 +35,8 @@ maintainers = [
 dynamic = ["version"]
 requires-python = ">= 3.8"
 dependencies = [
-#    "google",
-#    "h5py",
-#    "importlib",
-#    "numpy",
-#    "pandas",
-#    "pip-tools",
-#    "pipreqs==0.4.12",
-#    "plotly",
-#    "pyreadr",
-#    "PyYAML",
-#    "requests",
-#    "termcolor",
+    "numpy",
+    "pandas",
 ]
 
 # Similar to `dependencies` above, these must be valid existing
@@ -57,11 +46,11 @@ dev = ["check-manifest"]
 test = ["coverage"]
 
 [project.urls]
-Homepage = "https://example.com"
+Homepage = "https://github.com/aifimmunology/fake_hisepy"
 Documentation = "https://readthedocs.org"
-Repository = "https://github.com/me/spam.git"
-"Bug Tracker" = "https://github.com/me/spam/issues"
-Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
+Repository = "https://github.com/aifimmunology/fake_hisepy.git"
+# "Bug Tracker" = "https://github.com/me/spam/issues"
+# Changelog = "https://github.com/me/spam/blob/master/CHANGELOG.md"
 
 # The following would provide a command line executable called `sample`
 # which executes the function `main` from this package when invoked.
