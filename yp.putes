@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='fake_hisepy',
-    version='0.1.0',  # You can change the version as needed
+    version='0.1.1',  # You can change the version as needed
     author='Paul Mariz',
     author_email='paul.mariz@alleninstitute.org',
     description='A brief description of hisepy',

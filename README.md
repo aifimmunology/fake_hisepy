@@ -45,10 +45,10 @@ conda build and copy the --output-folder
 conda build fake_hisepy --output-folder conda_build
 ```
 
-convert to other formats
+remove the intermediate files
 
 ```bash
-conda convert --platform all /opt/homebrew/Caskroom/miniconda/base/conda-bld/noarch/fake_hisepy-0.1.0-py_0.tar.bz2 -o dist_conda/
+conda build purge
 ```
 
 
@@ -61,3 +61,17 @@ conda config --set anaconda_upload yes
 ```bash
 python3 -m twine upload --repository testpypi dist/*
 ```
+
+Install the anaconda client
+conda install anaconda-client
+
+
+Log into your Anaconda.org account from your terminal with the command:
+anaconda login.
+
+Upload using:
+anaconda upload ./conda_build/noarch/fake_hisepy-0.1.0-py_0.tar.bz2
+
+
+You can log out of your Anaconda.org account with the command:
+anaconda logout

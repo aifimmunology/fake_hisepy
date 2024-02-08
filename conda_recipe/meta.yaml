@@ -1,13 +1,12 @@
 {% set name = "fake_hisepy" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: file:///Users/ed.johnson/dev/fake_hisepy/dist/fake_hisepy-0.1.0.tar.gz
-  sha256: baefe2fc1781f68222798585b2cb34b989b8dc3cb2598a8fcd4381a8759931c5
+  path: ../
 
 build:
   noarch: python
@@ -27,7 +26,7 @@ requirements:
 
 test:
   imports:
-    - src
+    - fake_hisepy 
   commands:
     - pip check
   requires:
