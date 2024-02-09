@@ -67,7 +67,7 @@ conda install anaconda-client
 
 
 Log into your Anaconda.org account from your terminal with the command:
-anaconda login.
+anaconda login
 
 Upload using:
 anaconda upload ./conda_build/noarch/fake_hisepy-0.1.0-py_0.tar.bz2

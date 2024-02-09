@@ -1,4 +1,5 @@
 import argparse
+from upload import upload
 
 def main():
     parser = argparse.ArgumentParser(description="This script provides information about the program.")
