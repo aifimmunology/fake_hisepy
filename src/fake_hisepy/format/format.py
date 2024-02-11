@@ -12,12 +12,8 @@ import h5py
 import pandas as pd
 import json
 
-import utils as cu
-
-# setting global config
-_here = os.path.abspath(os.path.dirname(__file__))
-CONFIG = cu.read_yaml('{}/config.yaml'.format(_here))
-
+import fake_hisepy.utils.utils as cu
+from fake_hisepy.config.config import config as CONFIG
 
 def convert_data_values(filepath: str, filetype: str):
     try:

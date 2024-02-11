@@ -1,12 +1,9 @@
 import requests
 import os
 
-import utils as cu
-from auth import get_from_metadata_server, get_bearer_token_header
-
-_here = os.path.abspath(os.path.dirname(__file__))
-CONFIG = cu.read_yaml('{}/config.yaml'.format(_here))
-
+import fake_hisepy.utils.utils as cu
+from fake_hisepy.auth.auth import get_from_metadata_server, get_bearer_token_header
+from fake_hisepy.config.config import config as CONFIG
 
 def stop_ide():
     ''' Stops/Terminates the active instance that is calling this function. '''

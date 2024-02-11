@@ -12,13 +12,11 @@ import pyreadr
 import datetime
 from google.cloud import storage
 
-import utils as cu
-from auth import get_from_metadata_server, get_bearer_token_header, server_id_path
-from read import hise_file
+import fake_hisepy.utils.utils as cu
+from fake_hisepy.auth.auth import get_from_metadata_server, get_bearer_token_header, server_id_path
+from fake_hisepy.read.read import hise_file
 
-# load config for global variables and endpoints
-_here = os.path.abspath(os.path.dirname(__file__))
-CONFIG = cu.read_yaml('{}/config.yaml'.format(_here))
+from fake_hisepy.config.config import config as CONFIG
 
 
 def list_project_folders():

@@ -8,14 +8,9 @@ import os
 import pytest
 import requests
 from unittest import mock
-import hisepy
 import tempfile
-from read import hise_url, parse_hise_response
-from auth import get_bearer_token_header
-from hisepy.abstraction import AbstractionAppImg
-from unittest.mock import Mock
-from pathlib import Path
 
+from fake_hisepy.data_apps.abstraction import AbstractionAppImg
 
 class TestAbstractionAppImg:
 

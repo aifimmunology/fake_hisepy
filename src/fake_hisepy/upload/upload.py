@@ -9,11 +9,13 @@ import uuid
 import plotly.graph_objects as go
 import requests
 
-import utils as cu
-import auth
-from auth import get_from_metadata_server, get_bearer_token_header, instance_name_path
-from read import parse_hise_response, hise_url
-from schedule import current_notebook
+import fake_hisepy.utils.utils as cu
+import fake_hisepy.auth.auth as auth
+from fake_hisepy.auth.auth import get_from_metadata_server, get_bearer_token_header, instance_name_path
+from fake_hisepy.read.read import parse_hise_response, hise_url
+from fake_hisepy.schedule.schedule import current_notebook
+
+from fake_hisepy.config.config import config as CONFIG
 
 dataframe_file_type = "Visualization-dataframe"
 freezer_ignore_endpoints = {"shutdown": None}
@@ -21,8 +23,6 @@ permanent_store = "permanent"
 project_store = "project"
 valid_upload_stores = [permanent_store, project_store]
 
-_here = os.path.abspath(os.path.dirname(__file__))
-CONFIG = cu.read_yaml('{}/config.yaml'.format(_here))
 IDE_HOME_DIR = CONFIG['IDE']['HOME_DIR'] if not auth.debug() else os.getcwd()
 UPLOAD_HARVEST_LOWER_BOUND = CONFIG['TOOLCHAIN'][
     'UPLOAD_HARVEST_LOWER_BOUND_MB']

@@ -5,16 +5,15 @@ import tempfile
 import tarfile
 import shutil
 import pathlib as pl
-import utils as cu
-import upload as cup
-from auth import get_from_metadata_server, get_bearer_token_header, instance_name_path
-from read import parse_hise_response, hise_url
-from schedule import current_notebook
+import fake_hisepy.utils.utils as cu
+import fake_hisepy.upload.upload as cup
+from fake_hisepy.auth.auth import get_from_metadata_server, get_bearer_token_header, instance_name_path
+from fake_hisepy.read.read import parse_hise_response, hise_url
+from fake_hisepy.schedule.schedule import current_notebook
 import pandas as pd
-import auth
+import fake_hisepy.auth.auth as auth
+from fake_hisepy.config.config import config as CONFIG
 
-_here = os.path.abspath(os.path.dirname(__file__))
-CONFIG = cu.read_yaml('{}/config.yaml'.format(_here))
 IDE_HOME_DIR = CONFIG['IDE']['HOME_DIR'] if not auth.debug() else os.getcwd()
 any_project_urn = "urn:hise:project:any"
 

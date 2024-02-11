@@ -6,13 +6,14 @@ import pandas
 import requests
 import time
 
-import utils as cu
-from auth import get_from_metadata_server, get_bearer_token_header, server_id_path, instance_name_path
-from read import download_files
+import fake_hisepy.utils.utils as cu
+from fake_hisepy.auth.auth import get_from_metadata_server, get_bearer_token_header, server_id_path, instance_name_path
+from fake_hisepy.read.read import download_files
+
+from fake_hisepy.config.config import config as CONFIG
 
 the_current_notebook = None
-_here = os.path.abspath(os.path.dirname(__file__))
-CONFIG = cu.read_yaml('{}/config.yaml'.format(_here))
+
 derived_instance_flag_file = "/%s/.derivedinstance" % (
     CONFIG['IDE']['HOME_DIR'])
 job_record_file = "/%s/.notebookschedulerjobid" % (CONFIG['IDE']['HOME_DIR'])

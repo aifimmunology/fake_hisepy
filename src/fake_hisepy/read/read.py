@@ -9,13 +9,12 @@ from termcolor import colored
 
 import requests
 
-import utils as cu
-import format as hf
-import lookup as hl
-from auth import get_from_metadata_server, get_bearer_token_header, server_id_path
+import fake_hisepy.utils.utils as cu
+import fake_hisepy.format.format as hf
+import fake_hisepy.lookup.lookup as hl
+from fake_hisepy.auth.auth import get_from_metadata_server, get_bearer_token_header, server_id_path
 
-_here = os.path.abspath(os.path.dirname(__file__))
-CONFIG = cu.read_yaml('{}/config.yaml'.format(_here))
+from fake_hisepy.config.config import config as CONFIG
 
 
 class hise_file:

@@ -17,7 +17,7 @@ import datetime
 import json
 import pathlib
 import copy
-from auth import debug
+from fake_hisepy.auth.auth import debug
 
 # directory of hisepy package
 _here = os.path.abspath(os.path.dirname(__file__))

@@ -6,9 +6,15 @@ channels:
 dependencies:
   - python=3.11
   - conda-build
+  - conda-verify
   - grayskull
   - numpy
   - pandas
+  - termcolor
+  - h5py
+  - pyreadr
+  - plotly
+  - tomli
   - pip
   - pip:
     - build

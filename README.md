@@ -41,8 +41,15 @@ python3 -m build
 
 conda build and copy the --output-folder
 
+
 ```bash
-conda build fake_hisepy --output-folder conda_build
+conda build conda_recipe
+
+conda install --use-local fake_hisepy
+```
+
+```bash
+conda build conda_recipe --output-folder conda_dist
 ```
 
 remove the intermediate files
@@ -70,8 +77,11 @@ Log into your Anaconda.org account from your terminal with the command:
 anaconda login
 
 Upload using:
-anaconda upload ./conda_build/noarch/fake_hisepy-0.1.0-py_0.tar.bz2
+anaconda upload ./conda_dist/noarch/fake_hisepy-0.1.0-py_0.tar.bz2
 
 
 You can log out of your Anaconda.org account with the command:
 anaconda logout
+
+
+export PYTHONPATH="/Users/ed.johnson/dev/fake_hisepy/src:$PYTHONPATH"
